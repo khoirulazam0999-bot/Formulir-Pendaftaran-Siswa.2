@@ -1,0 +1,302 @@
+/* 1. Mengatur halaman latar belakang utama */
+body {
+  background-color: #f4f7fc; /* Warna abu-abu terang yang elegan */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;   /* Mengetengahkan secara horizontal */
+  align-items: center;       /* Mengetengahkan secara vertikal */
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Mengatur kotak container utama (Form Pendaftaran) */
+.container {
+  background-color: #ffffff; /* Mengubah background form menjadi putih bersih */
+  width: 100%;
+  max-width: 480px;          /* Membatasi lebar agar terlihat pas dan rapi */
+  padding: 35px;
+  border-radius: 20px;       /* Membuat sudut kotak melengkung modern */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Bayangan halus di bawah form */
+  border: 1px solid #eef2f5;
+  box-sizing: border-box;
+}
+
+/* Mengatur judul utama */
+.container h2, .container h1 {
+  text-align: center;
+  color: #111111;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+/* Mengatur sub-judul (silahkan isi data diri...) */
+.container p {
+  text-align: center;
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* 3. Menghilangkan atau mempercantik garis border bawaan <fieldset> (jika Anda memakainya) */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+legend {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* 4. Mengatur label teks di atas input */
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333333;
+  margin-top: 15px;
+  margin-bottom: 6px;
+}
+
+/* 5. Mengatur kolom input teks, email, password, tanggal, dan select dropdown */
+input[type="nama"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #dadce0; /* Warna garis border abu-abu tipis */
+  border-radius: 8px;        /* Sudut kolom melengkung halus */
+  font-size: 14px;
+  color: #333;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Efek saat kolom input diklik/fokus */
+input[type="nama"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: #1a73e8; /* Garis berubah biru gogle saat diklik */
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+/* 6. Mengatur spasi untuk radio button (Jenis Kelamin) dan checkbox */
+input[type="radio"], 
+input[type="checkbox"] {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+/* 7. Membuat tombol Kirim/Sign Up menjadi Biru Modern */
+button[type="submit"], 
+.btn-submit {
+  width: 100%;
+  background-color: #0052cc; /* Warna biru pekat modern */
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0043a4; /* Warna biru sedikit lebih gelap saat kursor menempel */
+}
+
+/* 1. Merapikan bagian Hobi agar teks berada di sebelah kotak checkbox */
+.container form div {
+  margin-bottom: 12px;
+}
+
+/* Mengatur agar checkbox dan teksnya berjejer ke samping, bukan ke bawah */
+input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Jika teks hobi dibungkus label/span, atau teks biasa agar jaraknya pas */
+input[type="checkbox"] + label, 
+input[type="checkbox"] + span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #444;
+}
+
+/* 2. Mengubah tombol Login menjadi Biru Lebar Modern */
+input[type="submit"], 
+button {
+  width: 100%;
+  background-color: #0052cc; /* Warna biru sesuai gambar di atas */
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover, 
+button:hover {
+  background-color: #0043a4; /* Biru agak gelap saat disentuh kursor */
+}
+
+/* 3. Mengetengahkan teks Forgot Password & Sign Up di paling bawah */
+.container p, 
+.container span,
+.container a {
+  text-align: center;
+}
+
+/* Mengatur link agar warnanya biru dan tidak ada garis bawah kuno */
+.container a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+/* 1. Mengurangi jarak antar kelompok input agar lebih rapat */
+form div {
+  margin-bottom: 8px !important; /* Memaksa jarak vertikal menjadi lebih kecil */
+}
+
+/* 2. Menghilangkan margin berlebih pada label agar menempel rapi dengan inputnya */
+label {
+  margin-top: 5px !important;
+  margin-bottom: 4px !important;
+}
+
+/* 3. Merapikan bagian Jenis Kelamin (Radio Button) agar berjejer ke samping */
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* Menghilangkan baris baru setelah radio button agar teks "Laki-Laki" dan "Perempuan" sejajar ke samping */
+input[type="radio"] + label, 
+input[type="radio"] + span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px; /* Memberi jarak antara opsi Laki-laki dan Perempuan */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* Mengubah semua teks label dan judul bagian menjadi hitam pekat */
+label, 
+span, 
+legend, 
+p,
+form {
+  color: #000000 !important;
+  font-weight: 600 !important; /* Membuat tulisan sedikit lebih tebal agar tegas */
+}
+
+/* Memastikan teks untuk pilihan hobi dan jenis kelamin juga ikut hitam */
+input[type="radio"] + label,
+input[type="radio"] + span,
+input[type="checkbox"] + label,
+input[type="checkbox"] + span {
+  color: #000000 !important;
+  font-weight: normal !important; /* Pilihan opsi tetap ketebalan biasa agar rapi */
+}
+
+
+/* Mengatur jarak kotak persetujuan agar tidak renggang */
+.terms-group {
+  display: flex !important;
+  align-items: flex-start !important;
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+/* Mengatur posisi kotak centang kecil */
+.terms-group input[type="checkbox"] {
+  margin-top: 3px !important;
+  margin-right: 8px !important;
+  cursor: pointer !important;
+}
+
+/* Mengatur teks persetujuan agar berwarna hitam murni dan ketebalan sedang */
+.terms-label {
+  font-size: 13px !important;
+  color: #000000 !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  display: inline-block !important;
+}
+
+/* Memberikan warna biru modern pada link teks aturan */
+.terms-label a {
+  color: #1a73e8 !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+}
+
+.terms-label a:hover {
+  text-decoration: underline !important;
+}
+
+
+.hobby-container {
+  display: flex !important;
+  border: 1px solid #dadce0 !important; /* Bingkai abu-abu tipis luar */
+  border-radius: 10px !important;       /* Sudut melengkung halus */
+  background-color: #ffffff !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 15px !important;
+}
+
+.hobby-item {
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: center !important;  /* Mengetengahkan teks dan kotak centang */
+  align-items: center !important;
+  padding: 12px 5px !important;        /* Memberikan ruang atas-bawah di dalam kotak */
+  font-size: 14px !important;
+  color: #000000 !important;
+  font-weight: 500 !important;
+  margin: 0 !important;                /* Menghapus margin bawaan */
+  cursor: pointer !important;
+}
+
+/* Membuat garis pembatas vertikal di antara pilihan hobi */
+.hobby-item:not(:last-child) {
+  border-right: 1px solid #dadce0 !important;
+}
+
+/* Jarak kecil antara kotak centang dengan teks hobinya */
+.hobby-item input[type="checkbox"] {
+  margin-right: 8px !important;
+  margin-top: 0 !important;
+}
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Siswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+    <h1>Formulir Pendaftaran Siswa</h1>
+    <p><em>silahkan isi data diri derngan lengkap!!</em></p>
+
+    <form>
+        <fieldset>
+            <legend>Data Diri</legend>
+
+            <label for="nama">Nama Lengkap:</label>
+            <input type="nama" id="nama" name="nama" placeholder="Masukan Nama Anda">
+
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukan Email Anda">
+
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Masukan Password Anda">
+
+            <br><br>
+            <label>Jenis Kelamin</label>
+            <input type="radio" id="laki" name="jenis kelamin" value="laki-laki">
+            <label for="laki">Laki-Laki</label>
+
+            <input type="radio" id="laki" name="jenis kelamin" value="laki-laki">
+            <label for="perempuan">perempuan</label>
+            <br><br>
+
+            <label for="tanggal">Tanggal Lahir</label>
+            <input type="date" id="tanggal" name="tanggal">
+        </fieldset>
+
+         <br>
+
+        <fieldset>
+            <legend>Data Sekolah</legend>
+            
+            <label for="jurusan">Jurusan:</label>
+
+            <select id="jurusan" name="jurusan">
+                <option value=""  >--pilih jurusan anda--</option>
+                <option value="rpl">rekayasa perangkat lunak</option>
+                <option value="dkv">desain komunikasi visual</option>
+                <option value="tkj">teknik komputer dan jaringan</option>
+            </select>
+
+            <br> <br>
+
+           <label>Hobi:</label>
+            <div class="hobby-container">
+            <label class="hobby-item">
+                <input type="checkbox" id="gaming" name="hobi" value="gaming"> gaming
+            </label>
+            <label class="hobby-item">
+                <input type="checkbox" id="fotografi" name="hobi" value="fotografi"> fotografi
+            </label>
+            <label class="hobby-item">
+                <input type="checkbox" id="musik" name="hobi" value="musik"> musik
+            </label>
+            </div>
+
+           
+        </fieldset>
+        <fieldset>
+            <div class="terms-group">
+                <input type="checkbox" id="terms">
+                <label for="terms" class="terms-label">I agree to the <a href="#">terms & conditions</a> and <a href="#">privacy policy</a></label>
+            </div>
+            <button>Login</button>
+
+
+            <a href="#">Forgot Password?</a>
+            <span>Dont have an account? Sign Up</span>
+
+        
+        </fieldset>
+
+    </form>
+</body>
+</html>
